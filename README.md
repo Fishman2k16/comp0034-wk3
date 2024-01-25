@@ -50,7 +50,7 @@ be converted into a flat structure that contains only native Python datatypes.
 There are different formats for the serialization of data, such as JSON, XML, and Python's pickle. JSON returns a
 human-readable string form, while Python’s pickle library can return a byte array.
 
-In the COMP0034 teaching materials pickle is used for serializing and deserializing machine learning models, and JSON
+In the COMP0034 teaching materials, pickle is used for serializing and deserializing machine learning models, and JSON
 for the REST API.
 
 You could serialize your own classes, for example by adding a `to_json` method to a class, or by creating an instance of
@@ -290,7 +290,7 @@ def event_id(event_id):
     :returns: JSON
     """
     event = db.session.execute(
-        db.select(Event).filter_by(event_id=event_id)
+        db.select(Event).filter_by(eif = event_id)
     ).scalar_one_or_none()
     return events_schema.dump(event)
 
